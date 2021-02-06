@@ -40,7 +40,6 @@ extensions = [
     'sphinx.ext.extlinks',
     'sphinx.ext.intersphinx',
     'sphinx.ext.napoleon',
-    'sphinxcontrib_trio',
 ]
 
 autodoc_member_order = 'bysource'
