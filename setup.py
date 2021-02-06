@@ -18,6 +18,7 @@ with open("README.md", "r") as f:
 
 setup(
     name = "Random Event",
+    author = "mossyegghead01",
     version = version,
     packages = ['random_event'],
     license = 'MIT',
