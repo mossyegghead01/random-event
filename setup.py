@@ -23,8 +23,5 @@ setup(
     license = 'MIT',
     description = "A python module made to generate random event at almost random time",
     long_description = long_desc,
-    install_requires = requirements,
-    setup_requires = ['pytest-runner'],
-    tests_require = ['pytest'],
-    test_suite = 'tests'
+    install_requires = requirements
 )
