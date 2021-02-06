@@ -9,7 +9,9 @@ Welcome to Random Event's documentation!
 Random event is a python module made to make random event at almost random time based on interval and chance
 
 Basic example:
+
 .. code-block:: python
+   :linenos:
 
    from random_event import events
 
@@ -19,7 +21,6 @@ Basic example:
 
    @rand_event.event()
    def recevier(event): # Currently the only accepted function name
-   
       print(event)
    
    rand_event.start() # start generating random event every specified interval time
