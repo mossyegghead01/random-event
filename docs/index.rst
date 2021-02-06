@@ -10,7 +10,6 @@ A python module made to make random event at almost random time based on interva
 
 Basic example:
 .. code-block:: python
-   :linenos:
    from random_event import events
 
    possible_event_list = ["asteroid", "volcano", "earthquake"]

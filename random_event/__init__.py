@@ -58,8 +58,8 @@ class events:
         def recevier(event):
           print(event)
       
-      Error that might rised
-      ----------------------
+      Raises
+      ------
       EventAlreadyRegisteredError
         Event (function name) already registered
       InvalidEvent
