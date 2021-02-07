@@ -30,7 +30,7 @@ Basic example:
    :maxdepth: 2
    :caption: Contents:
 
-   modules
+   API
 
 Indices and tables
 ==================
