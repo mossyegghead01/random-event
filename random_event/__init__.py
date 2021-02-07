@@ -18,14 +18,9 @@ class InvalidEventType(Exception):
 class events:
     """The main class of the module, used for most function in the module.
 
-    Parameters
-    ----------
-    event_list: [:class:`list`]
-      List of possible events for the module to randomize
-    interval: [:class:`int`]
-      interval between randomizing
-    chance: [:class:`int`]
-      chance of the event occur every interval.
+    :param list event_list: list of possible events to randomize
+    :param int interval: interval between randomize
+    :param ini chance: chance of the event occur every interval.
     """
     def __init__(self, event_list:list, interval:int, chance:int):
         self.event_list = event_list
@@ -36,12 +31,6 @@ class events:
     def call(self, type, *args, **kwargs):
       """Call certain function with @events.event decorator. This function is not intended to be called except from the module itself.
       use :meth:`random_event.events.call_event` instead.
-
-      Parameters
-      ----------
-
-      type: [:class:`str`]
-        event type to be called(or function name)
       """
       if type in self.handlers:
         for h in self.handlers[type]:
@@ -58,13 +47,9 @@ class events:
         @events.event()
         def recevier(event):
           print(event)
-      
-      Raises
-      ------
-      EventAlreadyRegisteredError
-        Event (function name) already registered
-      InvalidEvent
-        Event (function) name is invalid
+
+      :raises EventAlreadyRegisteredError: Event (function name) already registered
+      :raises InvalidEvent: Event (function) name is invalid
       """
       def registerhandler(handler):
         type = handler.__name__
