@@ -4,5 +4,6 @@ API Reference
 work in progress
 
 .. automodule:: __init__
-   :members:
+    :imported-members:
+    :members:
 
