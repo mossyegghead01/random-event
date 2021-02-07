@@ -58,4 +58,4 @@ API reference
 |
 
 .. exception:: InvalidEventType
-   Indicate that the function name is invalid, caused by unsupported function name for :func:`event` decorator
+   Indicate that the function name is invalid, caused by unsupported function name for :func:`events.event` decorator
