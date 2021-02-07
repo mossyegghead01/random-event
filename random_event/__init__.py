@@ -39,6 +39,7 @@ class events:
 
       Parameters
       ----------
+
       type: [:class:`str`]
         event type to be called(or function name)
       """
