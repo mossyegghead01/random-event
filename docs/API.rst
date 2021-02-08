@@ -13,7 +13,7 @@ API reference
    .. method:: call(type, *args, **kwargs)
       Call certain function with @events.event decorator. 
       This function is not intended to be called except from the module itself.
-      For manual on_event calling use :py:meth:`events.call_event` instead.
+      For manual on_event calling use :meth:`call_event` instead.
    
    .. decorator:: event()
       A decorator that register event. You Can't have 2 decorator with same name
@@ -39,7 +39,7 @@ API reference
    .. method:: start()
       Start scheduler task to run the module every specified interval time. 
       at that time it will randomize wether the event will occur or not 
-      and what event happened from the event_list parameter from :py:class:`event`
+      and what event happened from the event_list parameter.
 
    .. method:: stop()
       stop the module task
