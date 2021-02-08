@@ -17,7 +17,7 @@ API reference
    .. method:: call(type, *args, **kwargs)
       Call certain function with @events.event decorator. 
       This function is not intended to be called except from the module itself.
-      For manual on_event calling use :meth:`events.call_event` instead.
+      For manual on_event calling use :py:meth:`events.call_event` instead.
    
    |
    
@@ -33,8 +33,8 @@ API reference
             print(event)
 
       Current supported function name. Anything else will raise :exc:`InvalidEventType` error
-      - on_event
-      - on_error
+      * on_event
+      * on_error
 
       :raises EventAlreadyRegisteredError: Event (function name) already registered
       :raises InvalidEventType: Event (function) name is invalid
@@ -49,7 +49,7 @@ API reference
    .. method:: start()
       Start scheduler task to run the module every specified interval time. 
       at that time it will randomize wether the event will occur or not 
-      and what event happened from the event_list parameter from :class:`event`
+      and what event happened from the event_list parameter from :py:class:`event`
    
    |
 
