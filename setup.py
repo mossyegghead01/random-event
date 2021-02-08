@@ -24,5 +24,6 @@ setup(
     license = 'MIT',
     description = "A python module made to generate random event at almost random time",
     long_description = long_desc,
+    long_description_content_type='text/markdown',
     install_requires = requirements
 )
