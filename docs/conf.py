@@ -13,7 +13,7 @@
 import os
 import sys
 import sphinx_rtd_theme
-from sphinx.ext import autodoc
+import re
 sys.path.insert(0, os.path.abspath('../'))
 
 
@@ -24,7 +24,11 @@ copyright = '2021, mossyegghead01'
 author = 'mossyegghead01'
 
 # The full version, including alpha/beta/rc tags
-release = '0.2'
+version = ''
+with open('../random_event/__init__.py') as f:
+    version = re.search(r'^__version__\s*=\s*[\'"]([^\'"]*)[\'"]', f.read(), re.MULTILINE).group(1)
+
+release = version
 
 # -- General configuration ---------------------------------------------------
 
