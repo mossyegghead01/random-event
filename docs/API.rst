@@ -1,8 +1,6 @@
 API reference
 =============
 
-|
-
 .. class:: events(event_list:list, interval:int, chance:int)
    The main class of the module, used for most function in the module.
 
@@ -12,14 +10,10 @@ API reference
    :param int chance: chance of the event occur every interval.
    :raises UnsupportedIntervalType: Passed interval type is unsupported
 
-   |
-
    .. method:: call(type, *args, **kwargs)
       Call certain function with @events.event decorator. 
       This function is not intended to be called except from the module itself.
       For manual on_event calling use :py:meth:`events.call_event` instead.
-   
-   |
    
    .. decorator:: event()
       A decorator that register event. You Can't have 2 decorator with same name
@@ -39,24 +33,16 @@ API reference
       :raises EventAlreadyRegisteredError: Event (function name) already registered
       :raises InvalidEventType: Event (function) name is invalid
    
-   |
-   
    .. method:: call_event()
       Used to call on_event manually.   
-   
-   |
    
    .. method:: start()
       Start scheduler task to run the module every specified interval time. 
       at that time it will randomize wether the event will occur or not 
       and what event happened from the event_list parameter from :py:class:`event`
-   
-   |
 
    .. method:: stop()
       stop the module task
-
-|
 
 .. exception:: BaseException
    Base exception for all exception.
@@ -65,13 +51,9 @@ API reference
    Indicate that the event already registered, 
    most probably caused by 2 function with the same name(if both function has @event decorator)
 
-|
-
 .. exception:: InvalidEventType
    Indicate that the function name is invalid, 
    caused by unsupported function name
 
-|
-
-..exception:: UnsupportedIntervalType
+.. exception:: UnsupportedIntervalType
    Raised when unsupported interval type passed
