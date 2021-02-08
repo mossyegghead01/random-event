@@ -25,5 +25,9 @@ setup(
     description = "A python module made to generate random event at almost random time",
     long_description = long_desc,
     long_description_content_type='text/markdown',
-    install_requires = requirements
+    install_requires = requirements,
+    url = 'https://github.com/mossyegghead01/random-event',
+    project_urls = {
+        "Documentation": "https://random-event.readthedocs.io/en/stable/"
+    }
 )
