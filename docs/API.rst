@@ -7,15 +7,17 @@ API reference
    The main class of the module, used for most function in the module.
 
    :param list event_list: list of possible events to randomize
+   :param str interval_type: Interval type (seconds, minutes, hours)
    :param int interval: interval between randomize
-   :param ini chance: chance of the event occur every interval.
+   :param int chance: chance of the event occur every interval.
+   :raises UnsupportedIntervalType: Passed interval type is unsupported
 
    |
 
    .. method:: call(type, *args, **kwargs)
       Call certain function with @events.event decorator. 
       This function is not intended to be called except from the module itself.
-      For manual event calling use :meth:`events.call_event` instead.
+      For manual on_event calling use :meth:`events.call_event` instead.
    
    |
    
@@ -27,8 +29,12 @@ API reference
       .. code-block:: python3
 
          @events.event()
-         def recevier(event):
+         def on_event(event):
             print(event)
+
+      Current supported function name. Anything else will raise :exc:`InvalidEventType` error
+      - on_event
+      - on_error
 
       :raises EventAlreadyRegisteredError: Event (function name) already registered
       :raises InvalidEventType: Event (function) name is invalid
@@ -36,22 +42,36 @@ API reference
    |
    
    .. method:: call_event()
-      Used to call event manually.   
+      Used to call on_event manually.   
    
    |
    
    .. method:: start()
       Start scheduler task to run the module every specified interval time. 
-      at that time it will randomize wether the event will occur or not and what event happened from the event_list parameter from :class:`event`
+      at that time it will randomize wether the event will occur or not 
+      and what event happened from the event_list parameter from :class:`event`
+   
+   |
+
+   .. method:: stop()
+      stop the module task
 
 |
+
+.. exception:: BaseException
+   Base exception for all exception.
    
 .. exception:: EventAlreadyRegisteredError
    Indicate that the event already registered, 
-   most probably caused by 2 function with the same name with :func:`events.event` decorator
+   most probably caused by 2 function with the same name(if both function has @event decorator)
 
 |
 
 .. exception:: InvalidEventType
    Indicate that the function name is invalid, 
-   caused by unsupported function name for :func:`events.event` decorator
+   caused by unsupported function name
+
+|
+
+..exception:: UnsupportedIntervalType
+   Raised when unsupported interval type passed
