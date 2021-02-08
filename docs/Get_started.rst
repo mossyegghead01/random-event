@@ -19,7 +19,7 @@ Basic example:
     # every 15 second, it will decide wether it will generate an event or no, if yes it will pick random item from possible_event_list list
 
     @rand_event.event()
-    def on_event(event): # Currently the only accepted function name
+    def on_event(event):
         print(event)
     
     @rand_event.event()
