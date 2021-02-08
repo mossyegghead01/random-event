@@ -8,6 +8,8 @@ Welcome to Random Event's documentation!
 
 Random event is a python module made to make random event at almost random time based on interval and chance
 
+please always refer to stable unless you use version before release
+
 Basic example:
 
 .. code-block:: python
